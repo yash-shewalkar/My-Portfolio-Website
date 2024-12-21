@@ -21,12 +21,12 @@ const Projects = () => {
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard title="Image Gallery" url="https://github.com/yash-shewalkar/my-image-gallery" image_scr="/GALLERY.png"/>
+          <ProjectCard title="ANPR System" url="https://github.com/yash-shewalkar/ANPR-System-for-Apartments"  image_scr="/ANPR.JPEG"/>
+          <ProjectCard title="Quiz App" url="https://github.com/yash-shewalkar/quiz-app" image_scr="/QUIZ.png"/>
+          <ProjectCard title="Credit Card Approval Predictor" url="https://github.com/yash-shewalkar/Credit-Card-Approval-Prediction-"image_scr="/CREDIT.png" />
+          <ProjectCard title="Portfolio Website" url="https://github.com/yash-shewalkar/My-Portfolio-Webisite" image_scr="/PORTFOLIO.png"/>
+          <ProjectCard title="Fake News Predictor" url="https://github.com/yash-shewalkar/Fake-News-Prediction-Data-Science-" image_scr="/FAKE.png"/>
         </div>
       </div>
     </div>
