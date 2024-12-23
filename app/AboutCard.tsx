@@ -14,16 +14,18 @@ import React from "react";
 
 const AboutCard: React.FC = () => {
     return (
-        <div className=" sm:w-5/6 w-full h-5/6 sm:p-10 p-7 sm:flex justify-between items-center mx-auto bg-slate-900 rounded-xl">
+        <div className=" sm:w-5/6 w-full h-5/6 sm:p-10 p-7 sm:flex justify-between items-center mx-auto bg-slate-950 rounded-xl  ">
+            
             {/* Left Section */}
             <div className="sm:w-5/12 h-full">
+            
                 {/* Profile Section */}
                 <div className="sm:h-1/2 w-full sm:flex justify-between items-start ">
                     <img
                         src="/yash.png"
                         alt="Profile"
                         className="sm:h-full rounded-lg w-48 mx-2"
-                    />
+                        />
                     
                     <div className="sm:my-0 my-3">
                         <div className="mb-3">
@@ -43,6 +45,8 @@ const AboutCard: React.FC = () => {
                             <span className="text-neutral-400"> (+91) 6378560286</span>
                         </div>
                     </div>
+                        
+                   
                 </div>
 
                 {/* Skills Section */}

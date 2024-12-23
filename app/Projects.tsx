@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <div id="projects" className="px-6 pt-36 pb-12 relative">
+    <div id="projects" className="px-6 pt-36 pb-12 relative mx-24">
       {/* Background Grid Layout */}
       <div className="h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.05] flex items-center justify-center absolute top-0 left-0 z-0">
         {/* Radial gradient for the container to give a faded look */}

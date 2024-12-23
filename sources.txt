@@ -1,0 +1,3 @@
+For navbar effect: 
+https://www.braydoncoyer.dev/blog/build-a-glassmorphic-navbar-with-tailwindcss-backdrop-filter-and-backdrop-blur  
+

@@ -2,35 +2,52 @@
 import React from "react";
 import { PinContainer } from "@/components/ui/3d-pin";
 
-const ProjectCard = ({title = "my project", url = "#", image_scr = "/CREDIT.png"}) => {
+const ProjectCard = ({
+  title = "My Project",
+  url = "#",
+  image_scr = "/CREDIT.png",
+  description = "Customizable Tailwind CSS and Framer Motion Components.",
+  techStack = ["React", "Tailwind CSS", "Framer Motion"],
+}) => {
   return (
-    <div className="relative flex items-center justify-center z-0 my-36 min-[320px]:-mb-14">
-    <PinContainer title={title} href={url} className="min-[320px]:w-72">
-      <div className="flex flex-col p-4 tracking-tight text-slate-100/50 bg-black rounded-lg shadow-input 
-                      w-[90%] sm:w-[14rem] md:w-[16rem] lg:w-[18rem] min-h-[16rem] lg:min-h-[22rem] ">
-        
-        {/* Title */}
-        <h3 className="font-bold text-base sm:text-lg lg:text-xl text-slate-100">
-          {title}
-        </h3>
-  
-        {/* Description */}
-        <div className="text-sm sm:text-base font-normal text-slate-400 mt-2">
-          Customizable Tailwind CSS and Framer Motion Components.
+    <div className="flex justify-center items-center w-full mx-auto my-8">
+      <PinContainer title={title} href={url} className="min-[320px]:w-80">
+        <div className="flex flex-col p-3 tracking-tight text-slate-100/50 bg-black rounded-lg shadow-input 
+                      backdrop-blur-3xl dark:bg-slate-950 dark:text-slate-50">
+          
+          {/* Title */}
+          <h3 className="font-bold text-sm sm:text-base lg:text-lg text-slate-100">
+            {title}
+          </h3>
+    
+          {/* Description */}
+          <div className="text-xs sm:text-sm font-normal text-slate-400 mt-2">
+            {description}
+          </div>
+    
+          {/* Gradient Visual */}
+          <div className="flex flex-1 justify-center items-center rounded-lg mt-4 p-1 overflow-hidden w-full h-56">
+            <img
+              src={image_scr}
+              alt="Project Image"
+              className="object-contain w-56 h-full rounded-2xl"
+            />
+          </div>
+
+          {/* Tech Stack Tags */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-xs font-medium bg-slate-800 text-slate-300 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-  
-        {/* Gradient Visual */}
-        <div className="flex flex-1 w-full rounded-lg mt-4 p-1 overflow-hidden">
-          <img
-            src={image_scr}
-            alt=""
-            className="object-contain w-full h-full rounded-2xl "
-          />
-        </div>
-      </div>
-    </PinContainer>
-  </div>
-  
+      </PinContainer>
+    </div>
   );
 };
 

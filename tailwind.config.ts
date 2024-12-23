@@ -17,9 +17,15 @@ export default {
   theme: {
   	extend: {
   		animation: {
-  			spotlight: 'spotlight 2s ease .75s 1 forwards'
+  			spotlight: 'spotlight 2s ease .75s 1 forwards',
+			  "fade-in": "fadeIn 1s ease-in-out",
+			  "fade-in-delay": "fadeIn 1.5s ease-in-out",
   		},
   		keyframes: {
+			fadeIn: {
+				"0%": { opacity: '0', transform: "translateY(-10px)" },
+				"100%": { opacity: '1', transform: "translateY(0)" },
+			  },
   			spotlight: {
   				'0%': {
   					opacity: '0',
