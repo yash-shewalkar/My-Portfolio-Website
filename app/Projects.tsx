@@ -15,9 +15,6 @@ const Projects = () => {
       <div className="relative z-10">
         {/* Header */}
         <h1 className="text-3xl text-center pb-6">Projects Section</h1>
-        <p className="text-xl text-center pb-8 text-purple-400">
-          This will contain -projects- image, title, GitHub link.
-        </p>
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -28,7 +25,9 @@ const Projects = () => {
           <ProjectCard title="Portfolio Website" url="https://github.com/yash-shewalkar/My-Portfolio-Webisite" image_scr="/PORTFOLIO.png"/>
           <ProjectCard title="Fake News Predictor" url="https://github.com/yash-shewalkar/Fake-News-Prediction-Data-Science-" image_scr="/FAKE.png"/>
         </div>
+        
       </div>
+
     </div>
   );
 };

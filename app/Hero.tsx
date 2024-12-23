@@ -11,7 +11,7 @@ import { FaLocationArrow } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div id='home' className='pd-20 pt-36'>
+    <div id='home' className='pd-20 pt-36 '>
 
       {/* <Spotlight className="absolute lg:inset-5 lg:top-30 lg:left-80 h-auto md:inset-5 md:-top-40 md:left-20 sm:-top-20 sm:left-0 " fill='white' />
       <Spotlight className="absolute h-auto inset-5 top-10 -left-10

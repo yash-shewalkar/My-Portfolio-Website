@@ -1,63 +1,60 @@
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
+export const personalInfo = {
+  name: "Yash Shewalkar",
+  email: "iamyashshewalkar@gmail.com",
+  education: "BTech - AIDS",
+  contact: "+91 6378560286",
+};
 
+export const skills = [
+  "HTML",
+  "Tailwind",
+  "JavaScript",
+  "TypeScript",
+  "C++",
+  "Java",
+  "GitHub",
+  "React.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Python",
+];
+
+export const interests = [
+  "IoT",
+  "Web3",
+  "Natural Language Processing",
+  "Computer Vision",
+  "AI",
+  "Machine Learning",
+  "Blockchain",
+];
+
+export const aboutMe = [
+  "Hello, I'm Yash Shewalkar, currently a third-year BTech student at VIT Pune. My journey into the world of coding began with a fervent passion for technology and a constant curiosity to explore new things.",
+  "Recently, I took a leap into web development, culminating in the creation of my first website. This project serves as a testing ground for my burgeoning skills and a testament to my commitment to continuous growth in the ever-evolving world of technology.",
+  "In essence, I am an aspiring coder, avid learner, and technology enthusiast on a journey to turn passion into proficiency, one line of code at a time.",
+];
+
+export const socialLinks = [
   {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    href: "https://github.com/yash-shewalkar",
+    icon: "github",
+    label: "GitHub",
   },
   {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
+    href: "https://leetcode.com/u/yash_shewalkar/",
+    icon: "leetcode",
+    label: "LeetCode",
+  },
+  {
+    href: "https://in.linkedin.com/in/yash-shewalkar",
+    icon: "linkedin",
+    label: "LinkedIn",
+  },
+  {
+    href: "https://www.instagram.com/yash_shewalkar/",
+    icon: "instagram",
+    label: "Instagram",
   },
 ];
