@@ -72,7 +72,7 @@ const AboutCard: React.FC = () => {
         {/* Skills Section */}
         <div className="mb-5">
           <p className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 text-center rounded-lg px-5 py-1 w-full text-base">
-            Skills:
+            Skills and Tools:
           </p>
           <div className="text-neutral-400 flex flex-wrap gap-2 mt-2">
             {skills.map((skill) => (

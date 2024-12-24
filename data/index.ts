@@ -18,16 +18,15 @@ export const skills = [
   "Express",
   "MongoDB",
   "Python",
+  
 ];
 
 export const interests = [
-  "IoT",
-  "Web3",
-  "Natural Language Processing",
-  "Computer Vision",
+  "Web Development",
+  "NLP",
   "AI",
   "Machine Learning",
-  "Blockchain",
+  "Computer Vision",
 ];
 
 export const aboutMe = [
@@ -58,3 +57,54 @@ export const socialLinks = [
     label: "Instagram",
   },
 ];
+
+export const projectsData = [  
+  {
+    Id: 1,
+    title: "Image Gallery",
+    url: "https://github.com/yash-shewalkar/my-image-gallery",
+    image_scr: "/GALLERY.png",
+    description: "Image Galllery with CRUD operations and authentication.",
+    techStack: ["NodeJS", "Express", "MongoDB","Mongoose"],
+  },
+  {
+    Id: 2,
+    title: "ANPR System ",
+    url: "https://github.com/yash-shewalkar/ANPR-System-for-Apartments",
+    image_scr: "/ANPR.JPEG",
+    description: "An Automatic Number Plate Recognition System for Apartments.",
+    techStack: ["Python", "OpenCV", "EasyOCR","Flask"],
+  },
+  {
+    Id: 3,
+    title: "Quiz App",
+    url: "https://github.com/yash-shewalkar/quiz-app",
+    image_scr: "/QUIZ.png",
+    description: "Quiz App build with Java and Swing GUI.",
+    techStack: ["Java", "Swing"],
+  },
+  {
+    Id: 4,
+    title: "Credit Card Approval Predictor",
+    url: "https://github.com/yash-shewalkar/Credit-Card-Approval-Prediction-",
+    image_scr: "/CREDIT.png",
+    description: "Predicts Credit Card Approval using Machine Learning.",
+    techStack: ["Python", "Pandas", "Numpy", "Scikit-learn","RandomForest"],
+  },
+  {
+    Id: 5,
+    title: "Portfolio Website",
+    url: "https://github.com/yash-shewalkar/My-Portfolio-Webisite",
+    image_scr: "/PORTFOLIO.png",
+    description: "My Portfolio Website.",
+    techStack: ["Next.JS","React.JS","TypeScript", "Tailwind CSS", "Shadcn-UI"],
+  },
+  {
+    Id: 6,
+    title: "Fake News Predictor",
+    url: "https://github.com/yash-shewalkar/Fake-News-Prediction-Data-Science-",
+    image_scr: "/FAKE.png",
+    description: "Predicts Fake News using Machine Learning.",
+    techStack: ["Python", "Pandas", "Numpy", "Scikit-learn","LogesticRegression","TfidfVectorizer","RandomForest","GradientBoost"],
+  },
+]

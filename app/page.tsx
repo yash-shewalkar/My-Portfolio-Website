@@ -19,7 +19,7 @@ export default function Home() {
         <Grid/>
         <div className="w-full relative border-t border-gray-700 "></div>
         <Projects/>
-        <div className="w-full relative border-t border-gray-700 mt-44"></div>
+        <div className="w-full relative mt-44"></div>
         <Contact/>
   
 
