@@ -110,7 +110,7 @@ export default {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-      require("tailwindcss-animate")
+      require("tailwindcss-animate",)
 ],
 
 } satisfies Config;

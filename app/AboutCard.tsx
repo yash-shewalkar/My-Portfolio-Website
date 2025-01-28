@@ -11,6 +11,7 @@ import {
 
 import React from "react";
 import { personalInfo, skills, interests, aboutMe, socialLinks } from "../data";
+import ContactForm from "@/components/ui/ContactForm";
 
 const AboutCard: React.FC = () => {
   const renderIcon = (icon: string) => {
@@ -42,26 +43,26 @@ const AboutCard: React.FC = () => {
           <div>
             <p className="mb-3">
               <span className="font-semibold text-lg">Name:</span>{" "}
-              <span className="text-neutral-400">{personalInfo.name}</span>
+              <span className="text-neutral-400 text-xl">{personalInfo.name}</span>
             </p>
             <p className="mb-3">
               <span className="font-semibold text-lg">Email:</span>{" "}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-blue-400 underline"
+                className="text-neutral-400  "
               >
                 {personalInfo.email}
               </a>
             </p>
             <p className="mb-3">
               <span className="font-semibold text-lg">Education:</span>{" "}
-              <span className="text-neutral-400">{personalInfo.education}</span>
+              <span className="text-neutral-400 text-xl">{personalInfo.education}</span>
             </p>
             <p className="mb-3">
               <span className="font-semibold text-lg">Contact:</span>{" "}
               <a
                 href={`tel:${personalInfo.contact}`}
-                className="text-blue-400 underline"
+                className="text-neutral-400"
               >
                 {personalInfo.contact}
               </a>
@@ -113,29 +114,34 @@ const AboutCard: React.FC = () => {
             <div className="bg-blue-600 h-1 mt-2 w-2/3"></div>
           </div>
           <div className="text-neutral-400 sm:mt-4 mt-8 sm:text-base text-lg font-light">
-            {aboutMe.map((paragraph, index) => (
-              <p key={index} className={index !== 0 ? "mt-3" : ""}>
-                {paragraph}
-              </p>
-            ))}
+
+            <p className="mt-3">
+              {aboutMe}
+            </p>
+            <div>
+              <ContactForm />
+            </div>
           </div>
         </div>
 
         {/* Social Links */}
         <div className="flex justify-around items-center mt-5">
           {socialLinks.map(({ href, icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="shadow-2xl shadow-neutral-600 p-2 rounded-full bg-slate-800 hover:bg-blue-700 transition-all duration-300"
-            >
-              {renderIcon(icon)}
-            </a>
+            <div key={label} className="flex items-center justify-center">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="shadow-2xl shadow-neutral-600 p-2 rounded-full bg-slate-800 hover:bg-blue-700 transition-all duration-300"
+              >
+                {renderIcon(icon)}
+              </a>
+              <span className="text-neutral-400 text-sm ml-2 hidden md:block">{label}</span>
+            </div>
           ))}
         </div>
+
       </div>
     </div>
   );
