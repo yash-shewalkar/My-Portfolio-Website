@@ -30,7 +30,7 @@ export const interests = [
 ];
 
 export const aboutMe = [
-  "Hello, I'm Yash Shewalkar, currently a third-year BTech student at VIT Pune. My journey into the world of coding began with a fervent passion for technology and a constant curiosity to explore new things."
+  "Hello, I'm Yash Shewalkar, currently a third-year BTech student at VIT Pune. I am a tech enthusiast and a developer. I love to explore new technologies and work on projects that challenge me. I am passionate about Web Development, Machine Learning, and AI. I am always eager to learn new things and improve my skills.",
 
 ];
 
