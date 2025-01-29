@@ -2,12 +2,12 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
-
+import Image from "next/image";
 interface SignInProps {
   className?: string; // Optional className prop
   id: string;
 }
-export default function SignIn({id, className = "" }: SignInProps) {
+export default function SignIn({ id, className = "" }: SignInProps) {
   const { data: session } = useSession();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [profileImage, setProfileImage] = useState<string | null>(null);
@@ -35,7 +35,7 @@ export default function SignIn({id, className = "" }: SignInProps) {
   }, [session?.user?.image]);
 
   return (
-    <div id = {id} className={`relative {$className}`}>
+    <div id={id} className={`relative {$className}`}>
       {session?.user ? (
         <div>
           <button
@@ -44,9 +44,11 @@ export default function SignIn({id, className = "" }: SignInProps) {
           >
             {/* Display user profile image or placeholder */}
             {session.user.image ? (
-              <img
-                src={profileImage || "/sam.jpg"}
+              <Image
+                src={profileImage ?? "/default-avatar.png"}
                 alt="Profile"
+                width={40}
+                height={40}
                 className="w-full h-full object-cover"
               />
             ) : (

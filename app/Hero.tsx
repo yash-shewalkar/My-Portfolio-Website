@@ -33,7 +33,7 @@ const Hero = () => {
           <div id="content" className="flex flex-col md:flex-row justify-between items-center md:items-center w-full p-4 md:p-8">
             {/* Left Container */}
             <div id="left" className="w-full p-4 text-center">
-              <p className="md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-700">
+              <p className="md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl mt-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-300">
                 A Tech Enthusiast and a Developer based in Pune, pursuing BTECH at VIT PUNE
               </p>
             </div>

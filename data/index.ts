@@ -70,7 +70,7 @@ export const projectsData = [
     Id: 2,
     title: "ANPR System ",
     url: "https://github.com/yash-shewalkar/ANPR-System-for-Apartments",
-    image_scr: "/ANPR.JPEG",
+    image_scr: "/ANPR.png",
     description: "An Automatic Number Plate Recognition System for Apartments.",
     techStack: ["Python", "OpenCV", "EasyOCR","Flask"],
   },
