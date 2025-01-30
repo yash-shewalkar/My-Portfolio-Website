@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SessionProvider } from "next-auth/react";
 import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,26 +28,32 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    
-    <html lang="en" suppressHydrationWarning>
-       <head />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-            <ThemeProvider
+
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <Script src="https://apis.google.com/js/platform.js" strategy="afterInteractive" />
+
+          {/* Google OAuth Client ID */}
+          <meta name="google-signin-client_id" content="AUTH_GOOGLE_ID.apps.googleusercontent.com" />
+          
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
             <SessionProvider>
-            {children}
-            <Analytics />
+              {children}
+              <Analytics />
             </SessionProvider>
-            
+
           </ThemeProvider>
-      </body>
-    </html>
+        </body>
+      </html>
     </>
   );
 }
