@@ -30,42 +30,33 @@ const AboutCard: React.FC = () => {
   };
 
   return (
-    <div className="sm:w-full h-5/6 sm:p-10 p-7 flex flex-wrap justify-between items-center mx-auto bg-slate-950 rounded-xl max-w-screen-xl shadow-lg">
+    <div className="sm:w-full h-full sm:p-10 p-7 flex flex-wrap justify-between items-start mx-auto bg-slate-950 rounded-xl max-w-screen-xl shadow-lg">
       {/* Left Section */}
-      <div className="sm:w-5/12 w-full mb-5 sm:mb-0">
+      <div className="sm:w-5/12 w-full mb-5 sm:mb-0 flex flex-col justify-between">
         {/* Profile Section */}
-        <div className="flex sm:flex-row flex-col items-center sm:items-start gap-4 mb-5">
+        <div className="flex sm:flex-col flex-row items-center sm:items-start gap-4 mb-5 justify-center">
           <img
-            src="/yash.png"
+            src="/mypic2.png"
             alt={`Profile of ${personalInfo.name}`}
-            className="rounded-lg w-48 h-48 object-cover"
+            className="rounded-lg w-32 h-32 sm:w-80 sm:h-80 object-cover mb-4 sm:mb-0 mx-auto"
           />
-          <div>
-            <p className="mb-3">
-              <span className="font-semibold text-lg">Name:</span>{" "}
-              <span className="text-neutral-400 text-xl">{personalInfo.name}</span>
+          <div className="text-right sm:text-left">
+            <p className="mb-3 text-sm sm:text-lg">
+              <span className="font-semibold">Name:</span>{" "}
+              <span className="text-neutral-400">{personalInfo.name}</span>
             </p>
-            <p className="mb-3">
-              <span className="font-semibold text-lg">Email:</span>{" "}
+            <p className="mb-3 text-sm sm:text-lg">
+              <span className="font-semibold">Email:</span>{" "}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-neutral-400  "
+                className="text-neutral-400"
               >
                 {personalInfo.email}
               </a>
             </p>
-            <p className="mb-3">
-              <span className="font-semibold text-lg">Education:</span>{" "}
-              <span className="text-neutral-400 text-xl">{personalInfo.education}</span>
-            </p>
-            <p className="mb-3">
-              <span className="font-semibold text-lg">Contact:</span>{" "}
-              <a
-                href={`tel:${personalInfo.contact}`}
-                className="text-neutral-400"
-              >
-                {personalInfo.contact}
-              </a>
+            <p className="mb-3 text-sm sm:text-lg">
+              <span className="font-semibold">Education:</span>{" "}
+              <span className="text-neutral-400">{personalInfo.education}</span>
             </p>
           </div>
         </div>
@@ -106,7 +97,7 @@ const AboutCard: React.FC = () => {
       </div>
 
       {/* Right Section */}
-      <div className="sm:w-6/12 w-full">
+      <div className="sm:w-6/12 w-full flex flex-col justify-between">
         {/* About Me Section */}
         <div className="mb-5">
           <div className="group w-fit">
@@ -114,10 +105,7 @@ const AboutCard: React.FC = () => {
             <div className="bg-blue-600 h-1 mt-2 w-2/3"></div>
           </div>
           <div className="text-neutral-400 sm:mt-4 mt-8 sm:text-base text-lg font-light">
-
-            <p className="mt-3">
-              {aboutMe}
-            </p>
+            <p className="mt-3">{aboutMe}</p>
             <div>
               <ContactForm />
             </div>
@@ -141,7 +129,6 @@ const AboutCard: React.FC = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

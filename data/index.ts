@@ -6,18 +6,20 @@ export const personalInfo = {
 };
 
 export const skills = [
-  "HTML",
   "Tailwind",
   "JavaScript",
   "TypeScript",
   "C++",
   "Java",
+  "Python",
   "GitHub",
+  "Git",
+  "Next.js",
   "React.js",
   "Node.js",
   "Express",
   "MongoDB",
-  "Python",
+  "PostMan",
   
 ];
 
@@ -26,12 +28,16 @@ export const interests = [
   "NLP",
   "AI",
   "Machine Learning",
-  "Computer Vision",
+  "Data Science",
+  "Data Engineering",
 ];
 
 export const aboutMe = [
-  "Hello, I'm Yash Shewalkar, currently a third-year BTech student at VIT Pune. I am a tech enthusiast and a developer. I love to explore new technologies and work on projects that challenge me. I am passionate about Web Development, Machine Learning, and AI. I am always eager to learn new things and improve my skills.",
-
+  "Hello, I'm Yash Shewalkar, a third-year BTech student at VIT Pune, specializing in AI & Data Science. With a deep passion for technology, I focus on using it to solve real-world challenges, particularly in Web Development, AI, and software engineering. I thrive in both team environments and independent projects, always eager to learn new concepts and expand my skills.",
+  
+  "Throughout my journey, I've worked on a diverse range of projects, from developing AI-powered systems to building an Automated Number Plate Recognition System for apartments. My exploration in tech has also introduced me to cutting-edge fields like natural language processing, LangFlow, Next.js, and Prisma ORM.",
+  
+  "I firmly believe that AI is not here to replace humans but to amplify our capabilities and drive innovation."
 ];
 
 export const socialLinks = [
@@ -107,3 +113,29 @@ export const projectsData = [
     techStack: ["Python", "Pandas", "Numpy", "Scikit-learn","LogesticRegression","TfidfVectorizer","RandomForest","GradientBoost"],
   },
 ]
+
+export const blogs = [
+  {
+      id: 1,
+      title: "Interpreting Canva's Use of Filters for Design Element Suggestions",
+      read: "6 min read",
+      image: "/canva.png",
+      link: "https://learnbuildshare.hashnode.dev/interpreting-canvas-use-of-filters-for-design-element-suggestions",
+  },
+  {
+      id: 2,
+      title: "10reasons for “Why you should learn C as your 1st programming language?”",
+      read: "6 min read",
+      image: "/cprog.png",
+      link: "https://medium.com/@yashshewalkar4133/10-reasons-for-why-you-should-learn-c-as-your-1st-programming-language-7c40cbcb9c9c",
+  },
+  {
+      id: 3,
+      title: "Tesla Model-S: A Case Study",
+      read: "6 min read",
+      image: "/tesla.png",
+      link: "https://medium.com/@yashshewalkar4133/tesla-model-s-a-case-study-9c7c0ae92683",
+  },
+
+
+];
