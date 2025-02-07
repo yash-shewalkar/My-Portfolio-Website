@@ -33,9 +33,9 @@ export const interests = [
 ];
 
 export const aboutMe = [
-  "Hello, I'm Yash Shewalkar, a third-year BTech student at VIT Pune, specializing in AI & Data Science. With a deep passion for technology, I focus on using it to solve real-world challenges, particularly in Web Development, AI, and software engineering. I thrive in both team environments and independent projects, always eager to learn new concepts and expand my skills.",
+  "Hello, I'm Yash Shewalkar, a third-year BTech student at VIT Pune, specializing in AI & Data Science. With a deep passion for technology, I focus on using it to solve real-world challenges, particularly in Web Development, AI, and software engineering. I thrive in both team environments and independent projects, always eager to learn new concepts and expand my skills. ",
   
-  "Throughout my journey, I've worked on a diverse range of projects, from developing AI-powered systems to building an Automated Number Plate Recognition System for apartments. My exploration in tech has also introduced me to cutting-edge fields like natural language processing, LangFlow, Next.js, and Prisma ORM.",
+  "Throughout my journey, I've worked on a diverse range of projects, from developing AI-powered systems to building an Automated Number Plate Recognition System for apartments. My exploration in tech has also introduced me to cutting-edge fields like natural language processing, LangFlow, Next.js, and Prisma ORM. ",
   
   "I firmly believe that AI is not here to replace humans but to amplify our capabilities and drive innovation."
 ];

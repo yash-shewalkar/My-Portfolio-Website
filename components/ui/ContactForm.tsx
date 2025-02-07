@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="mt-10 bg-slate-950 p-5 rounded-xl shadow-lg">
+    <div id="contact_me" className="mt-10 bg-slate-950 p-5 rounded-xl shadow-lg">
       <p className="font-semibold text-3xl text-center mb-5">Contact Me</p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-neutral-400">
         <div>

@@ -14,7 +14,7 @@ const Contact = () => {
 
         {/* Contact Button */}
         <a
-          href="#about"
+          href="#contact_me"
           className="group text-xl sm:text-2xl font-semibold relative px-6 py-3 border-2 border-blue-500 text-blue-500 transition-all duration-300 hover:bg-blue-500 hover:text-white rounded-lg shadow-md hover:shadow-blue-400 flex items-center gap-2"
         >
           Contact Me!

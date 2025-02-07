@@ -22,14 +22,20 @@ const ComingSoon = () => {
       {/* Coming Soon Message */}
       <div className="text-center z-10">
         <p className="text-lg text-gray-300 mb-4">
-          Have questions? Get ready to ask me anything! This feature is in the works and will be available soon. 
+          Have questions? Get ready to ask me anything! This feature is in the works and will be available soon.
         </p>
-        
+
         {/* Notify Me Button */}
         <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all">
           Notify Me
         </button>
       </div>
+      {/* Footer */}
+      <footer className="text-white pb-6 mt-16 sm:mt-24 z-10 w-full mx-auto absolute bottom-0">
+        <div className="flex justify-center">
+          <p className="text-xs sm:text-sm">&copy; 2024 Yash Shewalkar. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };

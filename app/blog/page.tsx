@@ -5,8 +5,10 @@ import Navbar from "../navbar";
 
 const Blogs = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-[20%] py-[10%]">
-            <Navbar />
+    <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-[10%] lg:px-[20%] py-[25%] lg:py-[10%]">
+
+
+      <Navbar />
       {/* Background Effect */}
       <div className="absolute inset-0 w-full h-full dark:bg-black bg-white dark:bg-grid-white/[0.1] bg-grid-blue-200/[0.05]">
         <div className="absolute inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -44,6 +46,12 @@ const Blogs = () => {
           </a>
         ))}
       </div>
+      {/* Footer */}
+      <footer className="text-white pb-6 mt-16 sm:mt-24 z-10 w-full mx-auto absolute bottom-0">
+        <div className="flex justify-center">
+          <p className="text-xs sm:text-sm">&copy; 2024 Yash Shewalkar. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };

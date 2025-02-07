@@ -108,14 +108,14 @@ const Navbar = () => {
         <div className="h-screen">
           <div className="flex flex-col justify-center items-center space-y-8 flex-grow pt-11">
             <Link
-              href="#home"
+              href="/#home"
               className="text-lg hover:underline"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               className="text-lg hover:underline"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -136,7 +136,7 @@ const Navbar = () => {
               AMA
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-lg hover:underline"
               onClick={() => setIsMenuOpen(false)}
             >

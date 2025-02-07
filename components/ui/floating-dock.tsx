@@ -77,7 +77,7 @@ function IconContainer({
   let heightTransformIcon = useTransform(
     distance,
     [-80, 0, 80],
-    [25, 40, 25]
+    [25, 50, 25]
   );
 
   let width = useSpring(widthTransform, {

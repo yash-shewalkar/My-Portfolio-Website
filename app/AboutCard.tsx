@@ -40,7 +40,7 @@ const AboutCard: React.FC = () => {
             alt={`Profile of ${personalInfo.name}`}
             className="rounded-lg w-32 h-32 sm:w-80 sm:h-80 object-cover mb-4 sm:mb-0 mx-auto"
           />
-          <div className="text-right sm:text-left">
+          <div className="text-left sm:text-left">
             <p className="mb-3 text-sm sm:text-lg">
               <span className="font-semibold">Name:</span>{" "}
               <span className="text-neutral-400">{personalInfo.name}</span>
@@ -107,7 +107,7 @@ const AboutCard: React.FC = () => {
           <div className="text-neutral-400 sm:mt-4 mt-8 sm:text-base text-lg font-light">
             <p className="mt-3">{aboutMe}</p>
             <div>
-              <ContactForm />
+              <ContactForm  />
             </div>
           </div>
         </div>
