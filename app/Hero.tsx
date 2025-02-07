@@ -51,7 +51,7 @@ const Hero = () => {
                
               />
             </a>
-            <a href="\latest_resume.pdf"  target="_blank" className='mx-6 my-4 w-56'  rel="noopener noreferrer">
+            <a href="\yash_shewalkar_.pdf"  target="_blank" className='mx-6 my-4 w-56'  rel="noopener noreferrer">
               <CrazyButton
                 title="Resume"
                 icon={<FaLocationArrow />}
