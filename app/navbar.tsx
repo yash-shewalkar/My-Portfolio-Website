@@ -78,6 +78,9 @@ const Navbar = () => {
           <Link href="/#contact" className="hover:underline">
             Contact
           </Link>
+          <Link href="/bookmarks" className="hover:underline">
+            Bookmarks
+          </Link>
         </div>
 
         {/* Sign-in Button or Profile Icon for Desktop */}
@@ -151,6 +154,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/bookmarks"
+              className="text-lg hover:underline"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Bookmarks
             </Link>
           </div>
         </div>

@@ -14,10 +14,14 @@ export async function middleware(req: NextRequest) {
 
   const pathname = req.nextUrl.pathname;
   console.log("finding sessions...", isAdmin, process.env.NEXT_PUBLIC_ADMIN_EMAIL, email);
-  if (isAdmin || pathname !== protectedRoute) {
+  if (isAdmin && pathname === "/bookmarks") {
     // if the user is an admin or the route is not protected, continue
+    return NextResponse.redirect(new URL(protectedRoute, req.url));
+  }
+  else if(isAdmin || pathname !== protectedRoute){
     return NextResponse.next();
-  } else if (isAdmin && pathname === protectedRoute) {
+  }
+  else if (isAdmin && pathname === protectedRoute) {
     // if the user is an admin and the route is protected, continue
     return NextResponse.next();
   } else if (!isAdmin && pathname === protectedRoute) {
