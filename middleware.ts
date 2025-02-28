@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getCookie } from "cookies-next";
 
 // export { auth as middleware } from "@/auth"
+// this is commeted for now, maybe if we need to use it later
 
 const protectedRoute = "/admin/bookmarks";
 console.log("middleware is running...");
