@@ -30,7 +30,8 @@ const AboutCard: React.FC = () => {
   };
 
   return (
-    <div className="sm:w-full h-full sm:p-10 p-7 flex flex-wrap justify-between items-start mx-auto bg-slate-950 rounded-xl max-w-screen-xl shadow-lg">
+    <div className="sm:w-full h-full sm:p-6 p-5 flex flex-wrap justify-between items-start mx-auto bg-slate-950 rounded-lg max-w-screen-lg shadow-md">
+
       {/* Left Section */}
       <div className="sm:w-5/12 w-full mb-5 sm:mb-0 flex flex-col justify-between">
         {/* Profile Section */}
@@ -62,15 +63,16 @@ const AboutCard: React.FC = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mb-5">
-          <p className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 text-center rounded-lg px-5 py-1 w-full text-base">
+        <div className="mb-5 w-full">
+          <p className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 text-center rounded-lg px-5 py-1 w-full text-base mb-5">
             Skills and Tools:
           </p>
-          <div className="text-neutral-400 flex flex-wrap gap-2 mt-2">
+          <div className="text-neutral-400 grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2 mt-2">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="border-2 border-white rounded-2xl px-3 py-1 bg-slate-900 hover:bg-blue-700 transition-all duration-300 text-sm"
+                className="border-2 border-transparent bg-slate-900 rounded-2xl px-3 py-1 text-sm text-center
+          hover:border-gradient-to-r  hover:bg-blue-700 transition-all duration-300 cursor-pointer"
               >
                 {skill}
               </span>
@@ -78,22 +80,27 @@ const AboutCard: React.FC = () => {
           </div>
         </div>
 
+
         {/* Interests Section */}
         <div>
-          <p className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 text-center rounded-lg px-5 py-1 w-full text-base">
+          <p className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 text-center rounded-lg px-5 py-1 mb-5 w-full text-base">
             Interests:
           </p>
-          <div className="text-neutral-400 flex flex-wrap gap-2 mt-2">
+          <div className="text-neutral-400 grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2 mt-2 ">
             {interests.map((interest) => (
               <span
                 key={interest}
-                className="border-2 border-white rounded-2xl px-3 py-1 bg-slate-900 hover:bg-blue-700 transition-all duration-300 text-sm"
+                className="border-2 border-transparent bg-slate-900 rounded-2xl px-2 py-1 text-sm text-center 
+        whitespace-nowrap hover:border-gradient-to-r hover:bg-blue-700 transition-all duration-300 cursor-pointer"
               >
                 {interest}
               </span>
             ))}
           </div>
         </div>
+
+
+
       </div>
 
       {/* Right Section */}
@@ -107,7 +114,7 @@ const AboutCard: React.FC = () => {
           <div className="text-neutral-400 sm:mt-4 mt-8 sm:text-base text-lg font-light">
             <p className="mt-3">{aboutMe}</p>
             <div>
-              <ContactForm  />
+              <ContactForm />
             </div>
           </div>
         </div>

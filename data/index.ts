@@ -6,22 +6,22 @@ export const personalInfo = {
 };
 
 export const skills = [
-  "Tailwind",
-  "JavaScript",
-  "TypeScript",
   "C++",
   "Java",
   "Python",
-  "GitHub",
+  "JavaScript",
+  "TypeScript",
   "Git",
-  "Next.js",
+  "GitHub",
   "React.js",
+  "Next.js",
   "Node.js",
   "Express",
   "MongoDB",
   "PostMan",
-  
+  "Tailwind",
 ];
+
 
 export const interests = [
   "Web Development",

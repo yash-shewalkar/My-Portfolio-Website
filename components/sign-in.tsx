@@ -1,5 +1,5 @@
 "use client";
-
+import { setCookie } from "cookies-next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -30,7 +30,7 @@ export default function SignIn({ id, className = "" }: SignInProps) {
         }
       }
     };
-
+    setCookie("userEmail", session?.user?.email, { maxAge: 60 * 60 * 24 * 7, path: "/" });
     fetchProfileImage();
   }, [session?.user?.image]);
 

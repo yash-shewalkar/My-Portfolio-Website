@@ -66,6 +66,9 @@ const Navbar = () => {
           <Link href="/#about" className="hover:underline">
             About
           </Link>
+          <Link href="/#projects" className="hover:underline">
+            Projects
+          </Link>
           <Link href="/blog" className="hover:underline">
             Blog
           </Link>
@@ -120,6 +123,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               About
+            </Link>
+            <Link
+              href="/#projects"
+              className="text-lg hover:underline"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
             </Link>
             <Link
               href="/blog"

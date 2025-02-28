@@ -97,10 +97,16 @@ const ContactForm: React.FC = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            onInput={(e: React.FormEvent<HTMLTextAreaElement>) => {
+              const target = e.currentTarget;
+              target.style.height = "auto"; // Reset height
+              target.style.height = `${target.scrollHeight}px`; // Adjust to content
+            }}
             required
-            rows={4}
-            className="w-full p-2 rounded-lg bg-slate-900 border border-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+            rows={2}
+            className="w-full p-2 rounded-lg bg-slate-900 border border-white focus:outline-none focus:ring-2 focus:ring-blue-600 overflow-hidden resize-none"
           />
+
         </div>
 
         <div>
