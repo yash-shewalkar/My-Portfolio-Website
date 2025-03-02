@@ -1,3 +1,105 @@
+# Portfolio Project Summary
+
+## Project Overview
+This project is a personal portfolio website built using **Next.js**, showcasing various aspects of the developer's work and skills. The website is deployed on **Vercel** and optimized for **performance and responsiveness**.
+
+---
+
+## API Structure
+
+### **Bookmarks API**
+- **POST**: Adds a new bookmark by fetching metadata using the **LinkPreview API** and saving it with **Prisma**.
+- **GET**: Retrieves all bookmarks, ordered by creation date.
+- **DELETE**: Deletes a specific bookmark by ID.
+
+### **Auth API**
+- **GET and POST** handlers for user authentication using **NextAuth** and **Google OAuth**.
+
+### **SendMail API**
+- **POST**: Sends email via a contact form using **Nodemailer**.
+
+---
+
+## Pages and Content
+
+### **Home Page**
+- **Hero section** introducing the developer.
+- Sections for **about, projects, and contact information**.
+
+### **Bookmarks Page**
+- Displays a **list of bookmarks** with options to **add** and **delete** bookmarks.
+- Includes a **form for adding bookmarks** and handling errors.
+
+### **Admin Bookmarks Page**
+- Similar to the bookmarks page, but includes **additional admin functionalities**.
+
+### **Contact Page**
+- **Contact form** allowing users to send messages with an **optional file attachment**.
+
+---
+
+## External APIs Used
+- **LinkPreview API**: Used to fetch metadata for bookmarks.
+- **Google OAuth**: Used for user authentication.
+
+---
+
+## Tech Stack Used
+
+### **Frontend**
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+
+### **Backend**
+- **Node.js**
+- **Prisma ORM**
+
+### **Database**
+- **Not specified** (assumed to be compatible with Prisma)
+
+### **Deployment**
+- **Vercel**
+
+### **Authentication**
+- **NextAuth with Google OAuth**
+
+### **Email Service**
+- **Nodemailer**
+
+---
+
+## Libraries Used
+- `@prisma/client`: ORM for database interactions.
+- `next-auth`: Authentication library.
+- `nodemailer`: For sending emails.
+- `react-icons`: For icon components.
+- `framer-motion`: For animations.
+- `tailwindcss`: For styling.
+- `@react-three/fiber`: For 3D graphics.
+- `cookies-next`: For handling cookies.
+- **Vercel Analytics**: For tracking analytics.
+
+---
+
+## Key Features
+- **Responsive Design**: Optimized for various screen sizes using **Tailwind CSS**.
+- **Bookmark Management**: Allows users to **add, view, and delete bookmarks**.
+- **Authentication**: Secure login with **Google OAuth**.
+- **Contact Form**: Users can send messages with **file attachments** via email.
+- **Admin Middleware**: Protects **admin routes** and redirects unauthorized users.
+
+
+
+
+
+
+
+
+
+
+
 # Live Demo
 https://shewalkar.tech/
 
