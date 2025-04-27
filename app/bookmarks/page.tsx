@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Navbar from "../navbar";
+import Image from "next/image";
+import Link from "next/link";
 type Bookmark = {
   id: string;
   url: string;
@@ -9,33 +11,50 @@ type Bookmark = {
   image?: string;
 };
 
+// Fetch bookmarks server-side 
+// returns bookmarks and error message if any
+async function fetchBookmarks() {
+  try {
+    const res = await fetch("/api/bookmarks"); // Replace with your API URL
+    const data = await res.json();
+
+    if (!res.ok) {
+      return { bookmarks: [], error: "Failed to load bookmarks" };
+    }
+
+    return { bookmarks: data, error: "" };
+  } catch (error) {
+    return {
+      bookmarks: [],
+      error: "Error fetching bookmarks",
+    };
+  }
+}
+
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // ✅ Fetch bookmarks on load
-  useEffect(() => {
-    const fetchBookmarks = async () => {
-      try {
-        const res = await fetch("/api/bookmarks");
-        const data = await res.json();
-        if (res.ok) setBookmarks(data);
-        else setError(data.error || "Failed to load bookmarks");
-      } catch (err) {
-        setError("Error fetching bookmarks");
-      }
-    };
+  // Fetch bookmarks when the component is mounted
+  const loadBookmarks = async () => {
+    const { bookmarks, error } = await fetchBookmarks();
+    setBookmarks(bookmarks);
+    setError(error);
+  };
 
-    fetchBookmarks();
+  // Call the function on component mount
+  useEffect(() => {
+    loadBookmarks();
   }, []);
+
+
 
   // ✅ Add bookmark
   const addBookmark = async () => {
     if (!url) return;
     setLoading(true);
-    setError("");
 
     try {
       const res = await fetch("/api/bookmarks", {
@@ -93,22 +112,35 @@ export default function Bookmarks() {
       {error && <p className="text-red-500 mb-2">{error}</p>}
 
       
-        {bookmarks.length === 0 && <p className="text-gray-600 z-10">No bookmarks yet.</p>}
+        {/* Show Skeleton Loader when bookmarks are loading */}
+        {bookmarks.length === 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
+          {Array(6).fill(null).map((_, idx) => (
+            <div key={idx} className="bg-gray-800 animate-pulse p-4 rounded-xl">
+              <div className="bg-gray-700 h-48 rounded-lg"></div>
+              <div className="mt-4 h-6 bg-gray-700 rounded w-2/3"></div>
+            </div>
+          ))}
+        </div>
+      ) : (
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
         {bookmarks.map((bookmark) => (
 
-          <a
+          <Link
             key={bookmark.id}
             href={bookmark.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group block bg-gray-950 border border-gray-700 rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105 hover:border-blue-500">
             {bookmark.image &&
-              <img
+              <Image
                 src={bookmark.image}
                 alt={bookmark.title}
                 className="w-full h-48 object-cover group-hover:opacity-90 "
+                width={400}
+                height={200}
+                loading="lazy"
               />}
 
             <div className="p-4">
@@ -127,9 +159,10 @@ export default function Bookmarks() {
 
               Remove
             </button>
-          </a>
+          </Link>
         ))}
       </div>
+      )}
       {/* Footer */}
       <footer className="text-white pb-6 mt-16 sm:mt-24 z-10 w-full mx-auto absolute bottom-0">
         <div className="flex justify-center">

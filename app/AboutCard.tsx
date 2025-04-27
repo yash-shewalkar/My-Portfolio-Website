@@ -1,5 +1,6 @@
 "use client";
-
+import Image from "next/image";
+import Link from "next/link";
 import {
   IconBrandGithub,
   IconBrandX,
@@ -36,10 +37,13 @@ const AboutCard: React.FC = () => {
       <div className="sm:w-5/12 w-full mb-5 sm:mb-0 flex flex-col justify-between">
         {/* Profile Section */}
         <div className="flex sm:flex-col flex-row items-center sm:items-start gap-4 mb-5 justify-center">
-          <img
+          <Image
             src="/mypic2.png"
             alt={`Profile of ${personalInfo.name}`}
             className="rounded-lg w-32 h-32 sm:w-80 sm:h-80 object-cover mb-4 sm:mb-0 mx-auto"
+            width={320}
+            height={320}
+            loading="lazy"
           />
           <div className="text-left sm:text-left">
             <p className="mb-3 text-sm sm:text-lg">
@@ -48,12 +52,9 @@ const AboutCard: React.FC = () => {
             </p>
             <p className="mb-3 text-sm sm:text-lg">
               <span className="font-semibold">Email:</span>{" "}
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="text-neutral-400"
-              >
+              <Link href={`mailto:${personalInfo.email}`} className="text-neutral-400">
                 {personalInfo.email}
-              </a>
+              </Link>
             </p>
             <p className="mb-3 text-sm sm:text-lg">
               <span className="font-semibold">Education:</span>{" "}
@@ -123,7 +124,7 @@ const AboutCard: React.FC = () => {
         <div className="flex justify-around items-center mt-5">
           {socialLinks.map(({ href, icon, label }) => (
             <div key={label} className="flex items-center justify-center">
-              <a
+              <Link
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -131,7 +132,7 @@ const AboutCard: React.FC = () => {
                 className="shadow-2xl shadow-neutral-600 p-2 rounded-full bg-slate-800 hover:bg-blue-700 transition-all duration-300"
               >
                 {renderIcon(icon)}
-              </a>
+              </Link>
               <span className="text-neutral-400 text-sm ml-2 hidden md:block">{label}</span>
             </div>
           ))}

@@ -3,7 +3,7 @@
 import React from "react";
 import FloatingDockDemo from "./ContactDock";
 import { FaLocationArrow } from "react-icons/fa";
-
+import Link from "next/link";
 const Contact = () => {
   return (
     <div id="contact" className="p-4 pt-6">
@@ -13,13 +13,13 @@ const Contact = () => {
         <h1 className="text-4xl sm:text-3xl font-semibold">Like my Work?</h1>
 
         {/* Contact Button */}
-        <a
+        <Link
           href="#contact_me"
           className="group text-xl sm:text-2xl font-semibold relative px-6 py-3 border-2 border-blue-500 text-blue-500 transition-all duration-300 hover:bg-blue-500 hover:text-white rounded-lg shadow-md hover:shadow-blue-400 flex items-center gap-2"
         >
           Contact Me!
           <FaLocationArrow className="transition-transform duration-300 group-hover:translate-x-2" />
-        </a>
+        </Link>
       </div>
 
       {/* Floating Dock */}

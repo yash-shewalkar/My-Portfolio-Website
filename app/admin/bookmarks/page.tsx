@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "../../navbar";
+import Image from "next/image";
 type Bookmark = {
   id: string;
   url: string;
@@ -112,17 +113,21 @@ export default function Bookmarks() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
         {bookmarks.map((bookmark) => (
 
-          <a
+          <Link
             key={bookmark.id}
             href={bookmark.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group block bg-gray-950 border border-gray-700 rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105 hover:border-blue-500">
             {bookmark.image &&
-              <img
+              <Image
                 src={bookmark.image}
                 alt={bookmark.title}
                 className="w-full h-48 object-cover group-hover:opacity-90 "
+                width={400}
+                height={200}
+                loading="lazy"
+
               />}
 
             <div className="p-4">
@@ -141,7 +146,7 @@ export default function Bookmarks() {
 
               Remove
             </button>
-          </a>
+          </Link>
         ))}
       </div>
       {/* Footer */}

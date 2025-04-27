@@ -2,7 +2,8 @@
 import React from "react";
 import { blogs } from "@/data";
 import Navbar from "../navbar";
-
+import Image from "next/image";
+import Link from "next/link";
 const Blogs = () => {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-[10%] lg:px-[20%] py-[25%] lg:py-[10%]">
@@ -25,17 +26,20 @@ const Blogs = () => {
       {/* Blogs Grid with Max Width Lock */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
         {blogs.map((blog) => (
-          <a
+          <Link
             key={blog.id}
             href={blog.link}
             target="_blank"
             rel="noopener noreferrer"
             className="group block bg-gray-950 border border-gray-700 rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105 hover:border-blue-500"
           >
-            <img
+            <Image
               src={blog.image}
               alt={blog.title}
               className="w-full h-48 object-cover group-hover:opacity-90"
+              width={400}
+              height={200}
+              loading="lazy"
             />
             <div className="p-4">
               <h2 className="text-xl font-semibold text-white group-hover:text-blue-400">
@@ -43,7 +47,7 @@ const Blogs = () => {
               </h2>
               <p className="text-gray-400 mt-2 text-sm">{blog.read}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
       {/* Footer */}

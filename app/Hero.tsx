@@ -6,7 +6,7 @@ import { TextGenerateEffect } from '@/components/ui/Text-generate-effect';
 import CrazyButton from '@/components/ui/CrazyButton';
 import { FaLocationArrow } from 'react-icons/fa';
 
-
+import Link from 'next/link';
 
 
 const Hero = () => {
@@ -42,7 +42,7 @@ const Hero = () => {
 
           <div className='flex flex-col md:flex-row justify-center items-center md:items-center w-full '>
 
-            <a href="#projects" className='mx-6 my-4 w-56'>
+            <Link href="#projects" className='mx-6 my-4 w-56'>
               <CrazyButton
                 title="Show my work"
                 icon={<FaLocationArrow />}
@@ -50,15 +50,15 @@ const Hero = () => {
                   buttonClasses="h-20"
                
               />
-            </a>
-            <a href="\yash_shewalkar_.pdf"  target="_blank" className='mx-6 my-4 w-56'  rel="noopener noreferrer">
+            </Link>
+            <Link href="\yash_shewalkar_.pdf"  target="_blank" className='mx-6 my-4 w-56'  rel="noopener noreferrer">
               <CrazyButton
                 title="Resume"
                 icon={<FaLocationArrow />}
                 position="right"
                 buttonClasses="h-20"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

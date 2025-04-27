@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { PinContainer } from "@/components/ui/3d-pin";
-
+import Image from "next/image";
 const ProjectCard = ({
   title = "My Project",
   url = "#",
@@ -27,10 +27,13 @@ const ProjectCard = ({
     
           {/* Gradient Visual */}
           <div className="flex flex-1 justify-center items-center rounded-lg mt-4 p-1 overflow-hidden w-full h-56">
-            <img
+            <Image
               src={image_scr}
               alt="Project Image"
               className="object-contain w-56 h-full rounded-2xl"
+              width={224}
+              height={224}
+              loading="lazy"
             />
           </div>
 
