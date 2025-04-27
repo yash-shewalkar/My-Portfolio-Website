@@ -108,7 +108,17 @@ export default function Bookmarks() {
         </button>
       </div>
       
-        {bookmarks.length === 0 && <p className="text-gray-600 z-10">No bookmarks yet.</p>}
+        {/* Show Skeleton Loader when bookmarks are loading */}
+        {bookmarks.length === 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
+          {Array(6).fill(null).map((_, idx) => (
+            <div key={idx} className="bg-gray-800 animate-pulse p-4 rounded-xl">
+              <div className="bg-gray-700 h-48 rounded-lg"></div>
+              <div className="mt-4 h-6 bg-gray-700 rounded w-2/3"></div>
+            </div>
+          ))}
+        </div>
+      ) : (
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto">
         {bookmarks.map((bookmark) => (
@@ -127,7 +137,6 @@ export default function Bookmarks() {
                 width={400}
                 height={200}
                 loading="lazy"
-
               />}
 
             <div className="p-4">
@@ -136,6 +145,7 @@ export default function Bookmarks() {
               </h2>
 
             </div>
+
             <button onClick={(e) => {
               e.preventDefault() // Prevents navigation
               e.stopPropagation() // Stops event bubbling
@@ -149,6 +159,7 @@ export default function Bookmarks() {
           </Link>
         ))}
       </div>
+      )}
       {/* Footer */}
       <footer className="text-white pb-6 mt-16 sm:mt-24 z-10 w-full mx-auto absolute bottom-0">
         <div className="flex justify-center">

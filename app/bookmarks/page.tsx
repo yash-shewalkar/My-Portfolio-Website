@@ -51,45 +51,45 @@ export default function Bookmarks() {
 
 
 
-  // ✅ Add bookmark
-  const addBookmark = async () => {
-    if (!url) return;
-    setLoading(true);
+  // // ✅ Add bookmark
+  // const addBookmark = async () => {
+  //   if (!url) return;
+  //   setLoading(true);
 
-    try {
-      const res = await fetch("/api/bookmarks", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url }),
-      });
+  //   try {
+  //     const res = await fetch("/api/bookmarks", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ url }),
+  //     });
 
-      const data = await res.json();
-      if (res.ok) {
-        setBookmarks([data, ...bookmarks]);
-        setUrl("");
-      } else {
-        setError(data.error || "Failed to add bookmark");
-      }
-    } catch (err) {
-      setError("Error adding bookmark");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     const data = await res.json();
+  //     if (res.ok) {
+  //       setBookmarks([data, ...bookmarks]);
+  //       setUrl("");
+  //     } else {
+  //       setError(data.error || "Failed to add bookmark");
+  //     }
+  //   } catch (err) {
+  //     setError("Error adding bookmark");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
-  // ✅ Delete bookmark
-  const deleteBookmark = async (id: string) => {
-    try {
-      const res = await fetch(`/api/bookmarks?id=${id}`, { method: "DELETE" });
-      if (res.ok) {
-        setBookmarks(bookmarks.filter((b) => b.id !== id));
-      } else {
-        setError("Failed to delete bookmark");
-      }
-    } catch (err) {
-      setError("Error deleting bookmark");
-    }
-  };
+  // // ✅ Delete bookmark
+  // const deleteBookmark = async (id: string) => {
+  //   try {
+  //     const res = await fetch(`/api/bookmarks?id=${id}`, { method: "DELETE" });
+  //     if (res.ok) {
+  //       setBookmarks(bookmarks.filter((b) => b.id !== id));
+  //     } else {
+  //       setError("Failed to delete bookmark");
+  //     }
+  //   } catch (err) {
+  //     setError("Error deleting bookmark");
+  //   }
+  // };
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-[10%] lg:px-[20%] py-[25%] lg:py-[10%]">
@@ -149,7 +149,8 @@ export default function Bookmarks() {
               </h2>
 
             </div>
-            <button onClick={(e) => {
+
+            {/* <button onClick={(e) => {
               e.preventDefault() // Prevents navigation
               e.stopPropagation() // Stops event bubbling
               deleteBookmark(bookmark.id)
@@ -158,7 +159,7 @@ export default function Bookmarks() {
             } className="text-white ml-4 bg-red-400 px-2 py-1 mb-1 hover:pointer  hover:bg-red-600 rounded-lg">
 
               Remove
-            </button>
+            </button> */}
           </Link>
         ))}
       </div>
