@@ -57,7 +57,7 @@ This project is a personal portfolio website built using **Next.js**, showcasing
 - **Prisma ORM**
 
 ### **Database**
-- **Not specified** (assumed to be compatible with Prisma)
+- **MongoDB -compatible with Prisma
 
 ### **Deployment**
 - **Vercel**
