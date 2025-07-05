@@ -13,7 +13,13 @@ import {
 import React from "react";
 import { personalInfo, skills, interests, aboutMe, socialLinks } from "../data";
 import ContactForm from "@/components/ui/ContactForm";
-
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+import { CustomHoverCardContent } from "@/components/CustomHoverCardContent"
+import { FaLinkedin } from "react-icons/fa"
 const AboutCard: React.FC = () => {
   const renderIcon = (icon: string) => {
     switch (icon) {
@@ -113,7 +119,44 @@ const AboutCard: React.FC = () => {
             <div className="bg-blue-600 h-1 mt-2 w-2/3"></div>
           </div>
           <div className="text-neutral-400 sm:mt-4 mt-8 sm:text-base text-lg font-light">
-            <p className="mt-3">{aboutMe}</p>
+            {/* <p className="mt-3">{aboutMe}</p> */}
+            <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+              Passionate about scalable backend systems, AI-driven solutions, and data engineering, with 18 months of hands-on experience delivering real-world projects. Key work includes JustQL, an AI-powered SQL query assistant improving query accuracy by 60%, and a Smart Number Plate Detection System using Firebase for real-time validation. Skilled in backend development (Next.js, FastAPI, Flask, Express.js), databases (MongoDB, SQL, Prisma ORM), and tools like Docker, Git, and TypeScript, with full-stack experience using React and Next.js. Recognized as a runner-up at{' '}
+
+              <HoverCard>
+                <HoverCardTrigger
+                  className="relative inline-block text-primary font-medium transition-all duration-200 cursor-pointer hover:text-blue-600 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  UBS India Hackathon
+                </HoverCardTrigger>
+
+                <CustomHoverCardContent
+                  logo={<FaLinkedin className="w-6 h-6 text-blue-500" />}
+                  title="@UBSIndiaHackathon"
+                  description="Runner-up among 50+ teams for building an AI based learning platform for rural students with real-time AI based voice interview system during UBS India Hackathon 2025."
+                  linkUrl="https://www.linkedin.com/posts/yash-shewalkar_hackathon-ubs-mitwpu-activity-7314294463051259904-MLPQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3-y5wBaQAcbwa0j6_GTBqQeuy5bobfNzk"
+                  date="Posted April 2025"
+                />
+              </HoverCard>
+              {' '}and top 8 finalist among 230+ teams at a{' '}
+              <HoverCard>
+                <HoverCardTrigger
+                  className="relative inline-block text-primary font-medium transition-all duration-200 cursor-pointer hover:text-blue-600 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  INSPIRON 4.0
+                </HoverCardTrigger>
+
+                <CustomHoverCardContent
+                  logo={<FaLinkedin className="w-6 h-6 text-blue-500" />}
+                  title="@INSPIRON4.0"
+                  description="Secured a place in the top 8 finalists out of 230+ teams at a national-level hackathon for an end-to-end Natural Language to SQL generation AI project."
+                  linkUrl="https://www.linkedin.com/in/yash-shewalkar/overlay/1751741482774/single-media-viewer/?profileId=ACoAAD3-y5wBaQAcbwa0j6_GTBqQeuy5bobfNzk"
+                  date="Posted MAY 2025"
+                />
+              </HoverCard>
+
+              , with a strong drive to contribute to innovative AI, backend, full-stack, or data engineering roles.
+            </p>
             <div>
               <ContactForm />
             </div>
